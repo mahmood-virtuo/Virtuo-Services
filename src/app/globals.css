@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --orange: #ee4c01;
+  --orange-bright: #ff3506;
+  --ink: #101010;
+  --card: #272727;
+  --muted: #6b6b6b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-orange: var(--orange);
+  --color-orange-bright: var(--orange-bright);
+  --color-ink: var(--ink);
+  --color-card: var(--card);
+  --font-sans: var(--font-alexandria);
+  --font-display: var(--font-anybody);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow-x: clip;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font-alexandria), Arial, sans-serif;
+}
+
+a,
+button,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container-page {
+  width: min(100% - 2rem, 1594px);
+  margin-inline: auto;
+}
+
+.font-display {
+  font-family: var(--font-anybody), Arial, sans-serif;
+}
+
+.orange-grid {
+  background-color: #050302;
+  background-image:
+    linear-gradient(rgba(238, 76, 1, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(238, 76, 1, 0.12) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(238, 76, 1, 0.28), transparent 54%);
+  background-size: 84px 84px, 84px 84px, 100% 100%;
+}
+
+.ticker-row {
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  white-space: nowrap;
+}
+
+.ticker-crossed {
+  transform: rotate(2.5deg) scale(1.04);
+}
+
+.ticker-crossed-alt {
+  transform: rotate(-2.5deg) scale(1.04);
+}
+
+.fade-edges {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 9%,
+    black 91%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 9%,
+    black 91%,
+    transparent
+  );
+}
+
+@media (max-width: 767px) {
+  .container-page {
+    width: min(100% - 1.25rem, 1594px);
+  }
+
+  .orange-grid {
+    background-size: 56px 56px, 56px 56px, 100% 100%;
+  }
 }

@@ -1,0 +1,54 @@
+const faqs = [
+  {
+    question: "How does Virtuo protect my data?",
+    answer:
+      "We follow strict confidentiality practices and secure handling procedures throughout every engagement.",
+  },
+  {
+    question: "Can I change my subscription plan at any time?",
+    answer:
+      "Absolutely - you can upgrade or downgrade directly from your Virtuo dashboard. Prorated billing ensures you only pay for what you use, and changes take effect immediately with no downtime.",
+  },
+  {
+    question: "Are custom integrations available?",
+    answer:
+      "Yes. Our specialists can scope custom integrations around your operational and compliance requirements.",
+  },
+  {
+    question: "What onboarding support does Virtuo provide?",
+    answer:
+      "Every client receives guided onboarding and a dedicated relationship manager to coordinate the setup process.",
+  },
+];
+
+export function Faq() {
+  return (
+    <section className="orange-grid px-4 py-24 text-white sm:py-32">
+      <div className="mx-auto max-w-[1200px]">
+        <h2 className="text-center font-display text-4xl font-medium tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
+          <span className="text-orange">Frequently asked</span> questions
+        </h2>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-7 text-white/60">
+          Discover how leading businesses optimize performance, automate
+          workflows, and achieve transformative growth with Virtuo Services.
+        </p>
+        <div className="mt-14 space-y-6">
+          {faqs.map((faq, index) => (
+            <details
+              key={faq.question}
+              open={index === 1}
+              className="group rounded-xl border border-orange bg-black/20 px-6 py-6 open:bg-orange/20 sm:px-8"
+            >
+              <summary className="cursor-pointer list-none font-display text-lg font-medium sm:text-xl">
+                {faq.question}
+              </summary>
+              <p className="mt-4 max-w-5xl text-sm leading-6 text-white/70">
+                {faq.answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
