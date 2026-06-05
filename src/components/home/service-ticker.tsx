@@ -12,7 +12,7 @@ function TickerGroup({ hidden = false }: { hidden?: boolean }) {
       {items.map((item) => (
         <div
           key={item}
-          className="flex items-center gap-8 font-display text-lg font-semibold text-white sm:text-2xl lg:text-[31px]"
+          className="flex items-center gap-8 font-sans text-[25px] font-normal leading-[30px] text-white"
         >
           {item}
           <span className="h-5 w-5 rounded-bl-xl rounded-tr-xl bg-orange" />

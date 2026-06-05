@@ -57,6 +57,26 @@ summary {
   background-size: 84px 84px, 84px 84px, 100% 100%;
 }
 
+.heading-gradient {
+  color: transparent;
+  background-image: linear-gradient(90deg, #ee4c01 0%, #ee4c01 36%, #000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.heading-gradient-light {
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    #fff 0%,
+    #fff 34%,
+    #ee4c01 64%,
+    #ee4c01 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .ticker-group {
   display: flex;
   flex-shrink: 0;
@@ -107,6 +127,24 @@ summary {
     saturate(3572%) hue-rotate(1deg) brightness(103%) contrast(106%);
 }
 
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  animation: testimonials-right 44s linear infinite;
+}
+
+.testimonial-group {
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+  gap: clamp(2rem, 4vw, 6rem);
+  padding-inline: clamp(1rem, 2vw, 2rem);
+}
+
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
 @keyframes marquee-left {
   from {
     transform: translate3d(0, 0, 0);
@@ -114,6 +152,16 @@ summary {
 
   to {
     transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes testimonials-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 

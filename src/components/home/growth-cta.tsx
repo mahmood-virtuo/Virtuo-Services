@@ -4,11 +4,10 @@ export function GrowthCta() {
   return (
     <section className="orange-grid px-4 py-24 text-center text-white sm:py-32">
       <div className="mx-auto max-w-4xl">
-        <h2 className="font-display text-4xl font-medium leading-[1.06] tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
-          Unlock Business <span className="text-orange">Potential with</span>
+        <h2 className="heading-gradient-light font-display text-4xl font-medium leading-[1.06] tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
+          Unlock Business Potential with
           <br />
-          Virtuo&apos;s All-in-One Expert{" "}
-          <span className="text-orange">Services</span>
+          Virtuo&apos;s All-in-One Expert Services
         </h2>
         <p className="mx-auto mt-8 max-w-3xl text-sm leading-7 text-white/70 sm:text-base">
           At Virtuo Services, we simplify the entire process with end-to-end

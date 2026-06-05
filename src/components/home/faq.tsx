@@ -31,8 +31,8 @@ export function Faq() {
   return (
     <section className="orange-grid px-4 py-24 text-white sm:py-32">
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="text-center font-display text-4xl font-medium tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
-          <span className="text-orange">Frequently asked</span> questions
+        <h2 className="heading-gradient-light text-center font-display text-4xl font-medium tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
+          Frequently asked questions
         </h2>
         <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-7 text-white/60">
           Discover how leading businesses optimize performance, automate
@@ -53,7 +53,7 @@ export function Faq() {
                   type="button"
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${index}`}
-                  className="flex w-full cursor-pointer items-center justify-between text-left font-display text-lg font-medium sm:text-xl"
+                  className="flex w-full cursor-pointer items-center justify-between text-left font-sans text-[25px] font-semibold leading-[30px]"
                   onClick={() => setOpenIndex(index)}
                 >
                   {faq.question}
@@ -61,7 +61,7 @@ export function Faq() {
                 <div
                   id={`faq-panel-${index}`}
                   hidden={!isOpen}
-                  className="mt-4 max-w-5xl text-sm leading-6 text-white/70"
+                  className="mt-4 max-w-5xl text-base font-light leading-[25px] text-white/70"
                 >
                   {faq.answer}
                 </div>

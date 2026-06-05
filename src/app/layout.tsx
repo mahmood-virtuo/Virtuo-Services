@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "Virtuo Services | Business Setup in the UAE",
   description:
     "Expert business setup, PRO, visa, banking, and corporate services in the UAE.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

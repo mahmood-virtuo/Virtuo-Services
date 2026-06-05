@@ -1,0 +1,104 @@
+"use client";
+
+import { useState } from "react";
+import { ChevronDownIcon } from "./icons";
+
+const menuSections = [
+  {
+    title: "BUSINESS SETUP",
+    links: [
+      "MAINLAND BUSINESS SETUP",
+      "FREE ZONE BUSINESS SETUP",
+      "OFFSHORE BUSINESS SETUP",
+    ],
+  },
+  {
+    title: "PRO SERVICES",
+    links: [
+      "IMMIGRATION SERVICES",
+      "TRADE LICENSE SERVICES",
+      "NOTARY PUBLIC SERVICES",
+      "CONSULATE SERVICES",
+      "ATTESTATION SERVICES",
+      "MOHRE SERVICES",
+      "LEGAL TRANSLATION SERVICES",
+      "DOCUMENT CLEARANCE SERVICES",
+      "POWER OF ATTORNEY",
+      "VIRTUAL OFFICE",
+      "GDRFA",
+    ],
+  },
+  {
+    title: "VISA SERVICES",
+    links: [
+      "GOLDEN VISA",
+      "RESIDENCE VISA",
+      "DEPENDENT VISA",
+      "EMPLOYEMENT VISA",
+      "INVESTOR VISA",
+    ],
+  },
+  {
+    title: "BANK ACCOUNT OPENING",
+    links: [
+      "BUSINESS BANK ACCOUNT OPENING",
+      "CORPORATE BANK OPENING",
+      "OFFSHORE BANK ACCOUNT",
+      "SME/STARTUP ACCOUNT",
+    ],
+  },
+];
+
+export function MegaMenu() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const active = menuSections[activeIndex];
+
+  return (
+    <div className="group/menu relative flex h-[118px] items-center">
+      <button
+        type="button"
+        className="flex items-center gap-1.5 transition-colors hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Services <ChevronDownIcon className="h-4 w-4" />
+      </button>
+
+      <div
+        data-mega-menu-panel
+        className="pointer-events-none fixed left-1/2 top-[148px] z-50 w-[min(1230px,calc(100vw-2rem))] -translate-x-1/2 translate-y-3 opacity-0 transition duration-200 ease-out group-hover/menu:pointer-events-auto group-hover/menu:translate-y-0 group-hover/menu:opacity-100 group-focus-within/menu:pointer-events-auto group-focus-within/menu:translate-y-0 group-focus-within/menu:opacity-100"
+      >
+        <div className="grid min-h-[386px] grid-cols-[.86fr_1px_1.14fr] bg-white px-16 py-16 text-ink shadow-[0_24px_60px_rgba(0,0,0,.14)]">
+          <div className="flex flex-col justify-center gap-6 pr-16">
+            {menuSections.map((section, index) => (
+              <a
+                key={section.title}
+                href="#services"
+                className={`font-display text-2xl font-semibold tracking-[-0.02em] transition-colors ${
+                  activeIndex === index ? "text-orange" : "text-ink"
+                } hover:text-orange`}
+                data-mega-category={section.title}
+                onMouseEnter={() => setActiveIndex(index)}
+                onFocus={() => setActiveIndex(index)}
+              >
+                {section.title}
+              </a>
+            ))}
+          </div>
+          <div className="bg-orange/70" />
+          <div className="grid content-center gap-x-20 gap-y-8 pl-20 text-base font-medium uppercase leading-none md:grid-cols-2">
+            {active.links.map((link) => (
+              <a
+                key={link}
+                href="#services"
+                className="transition-colors hover:text-orange"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

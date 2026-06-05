@@ -1,12 +1,9 @@
-import {
-  ChevronDownIcon,
-  MailIcon,
-  MenuIcon,
-  PhoneIcon,
-} from "./icons";
+import { MailIcon, PhoneIcon } from "./icons";
 import Image from "next/image";
 import { Logo } from "./logo";
 import { ButtonLink } from "./button-link";
+import { MegaMenu } from "./mega-menu";
+import { MobileMenu } from "./mobile-menu";
 
 const socialLinks = [
   { label: "LinkedIn", src: "/images/linkedin.svg" },
@@ -52,17 +49,12 @@ export function Header() {
         aria-label="Main navigation"
         className="container-page flex h-[118px] items-center justify-between"
       >
-        <Logo />
+        <Logo className="!h-[52px] !w-[138px] sm:!h-[61px] sm:!w-[162px]" />
         <div className="hidden items-center gap-16 text-sm lg:flex">
           <a href="#about" className="transition-colors hover:text-orange">
             About Us
           </a>
-          <a
-            href="#services"
-            className="flex items-center gap-1.5 transition-colors hover:text-orange"
-          >
-            Services <ChevronDownIcon className="h-4 w-4" />
-          </a>
+          <MegaMenu />
           <a href="#testimonials" className="transition-colors hover:text-orange">
             Blogs
           </a>
@@ -73,13 +65,7 @@ export function Header() {
         <div className="hidden lg:block">
           <ButtonLink arrow>Get a Quote</ButtonLink>
         </div>
-        <a
-          href="#footer"
-          aria-label="Open navigation"
-          className="rounded-md border border-white/50 p-2 lg:hidden"
-        >
-          <MenuIcon className="h-6 w-6" />
-        </a>
+        <MobileMenu />
       </nav>
     </header>
   );

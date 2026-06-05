@@ -35,6 +35,31 @@ const columns = [
   },
 ];
 
+const socialLinks = [
+  ["LinkedIn", "/images/linkedin.svg"],
+  ["Instagram", "/images/instagram.svg"],
+  ["Facebook", "/images/facebook.svg"],
+];
+
+function FooterSocialLinks({ className = "" }: { className?: string }) {
+  return (
+    <div className={`items-center gap-5 text-sm text-white/70 ${className}`}>
+      <span>Follow Us :</span>
+      {socialLinks.map(([label, src]) => (
+        <a key={label} href="#" aria-label={label}>
+          <Image
+            src={src}
+            alt=""
+            width={16}
+            height={16}
+            className="footer-social-icon"
+          />
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export function Footer() {
   return (
     <footer
@@ -47,7 +72,7 @@ export function Footer() {
         alt=""
         width={1604}
         height={424}
-        className="pointer-events-none absolute bottom-[-70px] left-1/2 max-w-[88vw] -translate-x-1/2 opacity-[.08]"
+        className="pointer-events-none absolute bottom-[-46px] left-[54%] w-[1120px] max-w-none -translate-x-1/2 opacity-[.24] sm:w-[1280px] lg:w-[1450px]"
       />
       <div className="container-page relative">
         <div className="grid gap-14 lg:grid-cols-[1.4fr_2.6fr_1.2fr]">
@@ -59,24 +84,7 @@ export function Footer() {
               company remains compliant and stress-free in one of the
               world&apos;s leading business hubs.
             </p>
-            <div className="mt-9 flex items-center gap-5 text-sm text-white/70">
-              <span>Follow Us :</span>
-              {[
-                ["LinkedIn", "/images/linkedin.svg"],
-                ["Instagram", "/images/instagram.svg"],
-                ["Facebook", "/images/facebook.svg"],
-              ].map(([label, src]) => (
-                <a key={label} href="#" aria-label={label}>
-                  <Image
-                    src={src}
-                    alt=""
-                    width={16}
-                    height={16}
-                    className="footer-social-icon"
-                  />
-                </a>
-              ))}
-            </div>
+            <FooterSocialLinks className="mt-9 hidden lg:flex" />
           </div>
 
           <div className="grid gap-10 sm:grid-cols-3">
@@ -120,6 +128,8 @@ export function Footer() {
               </a>
             </address>
           </div>
+
+          <FooterSocialLinks className="order-last flex lg:hidden" />
         </div>
 
         <div className="relative mt-32 flex flex-col gap-8 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">

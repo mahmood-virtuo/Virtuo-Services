@@ -4,10 +4,10 @@ import { ButtonLink } from "../button-link";
 export function WhyVirtuo() {
   return (
     <section className="py-20 sm:py-28 lg:py-36">
-      <div className="container-page grid items-center gap-12 lg:grid-cols-[1.35fr_.65fr] lg:gap-24">
+      <div className="container-page grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(360px,520px)] lg:gap-20 xl:grid-cols-[minmax(0,1fr)_minmax(480px,601px)]">
         <div>
-          <h2 className="font-display text-4xl font-medium tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
-            <span className="text-orange">Why Do Businesses Choose</span> Virtuo?
+          <h2 className="heading-gradient font-display text-4xl font-medium tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
+            Why Do Businesses Choose Virtuo?
           </h2>
           <div className="mt-9 max-w-[920px] space-y-7 text-sm leading-7 text-black/75 sm:text-base">
             <p>
@@ -29,14 +29,15 @@ export function WhyVirtuo() {
             <ButtonLink variant="outline">Speak with an Expert</ButtonLink>
           </div>
         </div>
-        <div className="relative mx-auto aspect-square w-full max-w-[600px] overflow-hidden rounded-full">
+        <div className="mx-auto hidden w-full max-w-[520px] lg:block xl:max-w-[601px]">
           <Image
             src="/images/home/handshake-image.png"
             alt="Business partners shaking hands"
-            fill
+            width={601}
+            height={601}
             loading="eager"
             sizes="(max-width: 1024px) 80vw, 34vw"
-            className="object-contain"
+            className="h-auto w-full"
           />
         </div>
       </div>
