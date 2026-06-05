@@ -29,13 +29,13 @@ function ReviewCards({ hidden = false }: { hidden?: boolean }) {
               />
             </div>
             <div>
-              <h3 className="font-display text-xl font-semibold">
+              <h3 className="type-h4 text-ink">
                 {review.name}
               </h3>
-              <p className="text-sm">{review.company}</p>
+              <p className="type-body text-black/70">{review.company}</p>
             </div>
           </div>
-          <p className="mt-12 text-sm leading-7 text-black/70">
+          <p className="type-body mt-12 text-black/70">
             {review.body}
           </p>
         </article>
@@ -47,7 +47,7 @@ function ReviewCards({ hidden = false }: { hidden?: boolean }) {
 export function Testimonials() {
   return (
     <section id="testimonials" className="overflow-hidden py-24 sm:py-32">
-      <h2 className="heading-gradient px-4 text-center font-display text-4xl font-medium tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
+      <h2 className="type-h2 heading-gradient px-4 text-center">
         What Our clients Say
       </h2>
       <div className="fade-edges mt-16 overflow-hidden sm:mt-24">

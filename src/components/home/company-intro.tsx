@@ -5,22 +5,23 @@ export function CompanyIntro() {
   return (
     <section id="about" className="py-20 sm:py-28 lg:py-36">
       <div className="container-page grid items-center gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-24">
-        <div className="relative order-2 mx-auto aspect-[62/65] w-full max-w-[620px] overflow-hidden rounded-bl-[48%] rounded-br-[48%] lg:order-1">
+        <div className="order-2 flex w-full justify-center lg:order-1">
           <Image
-            src="/images/home/leadership-team.jpg"
+            src="/images/home/teams.png"
             alt="Virtuo Services leadership team"
-            fill
+            width={578}
+            height={598}
             loading="eager"
-            sizes="(max-width: 1024px) 90vw, 40vw"
-            className="object-cover"
+            sizes="(max-width: 1024px) min(100vw - 2rem, 578px), 40vw"
+            className="h-auto w-full max-w-[578px]"
           />
         </div>
         <div className="order-1 lg:order-2">
-          <h2 className="heading-gradient max-w-[800px] font-display text-[2rem] font-medium leading-[1.04] tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
+          <h2 className="type-h2 heading-gradient max-w-[800px]">
             Fast, transparent, UAE-aligned{" "}
             corporate services.
           </h2>
-          <div className="mt-9 max-w-[880px] space-y-7 text-sm leading-7 text-black/75 sm:text-base">
+          <div className="type-body mt-9 max-w-[880px] space-y-7 text-black/75">
             <p>
               Virtuo Services F.Z.C is a UAE-based business solutions provider
               offering company formation, compliance, attestation, banking, and

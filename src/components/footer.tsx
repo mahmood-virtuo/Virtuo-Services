@@ -43,7 +43,7 @@ const socialLinks = [
 
 function FooterSocialLinks({ className = "" }: { className?: string }) {
   return (
-    <div className={`items-center gap-5 text-sm text-white/70 ${className}`}>
+    <div className={`type-button items-center gap-5 text-white/70 ${className}`}>
       <span>Follow Us :</span>
       {socialLinks.map(([label, src]) => (
         <a key={label} href="#" aria-label={label}>
@@ -72,13 +72,13 @@ export function Footer() {
         alt=""
         width={1604}
         height={424}
-        className="pointer-events-none absolute bottom-[-46px] left-[54%] w-[1120px] max-w-none -translate-x-1/2 opacity-[.24] sm:w-[1280px] lg:w-[1450px]"
+        className="pointer-events-none absolute bottom-[-46px] left-[54%] w-[1120px] max-w-none -translate-x-1/2 opacity-[.38] sm:w-[1280px] lg:w-[1450px]"
       />
       <div className="container-page relative">
         <div className="grid gap-14 lg:grid-cols-[1.4fr_2.6fr_1.2fr]">
           <div>
             <Logo />
-            <p className="mt-10 max-w-sm text-sm leading-7 text-white/65">
+            <p className="type-body mt-10 max-w-sm text-white/65">
               Virtuo Services provides expert business setup and PRO solutions
               in the UAE. We offer premium, end-to-end support to ensure your
               company remains compliant and stress-free in one of the
@@ -90,10 +90,10 @@ export function Footer() {
           <div className="grid gap-10 sm:grid-cols-3">
             {columns.map((column) => (
               <div key={column.title}>
-                <h2 className="text-sm font-semibold text-orange">
+                <h2 className="type-button text-orange">
                   {column.title}
                 </h2>
-                <ul className="mt-9 space-y-6 text-sm text-white/65">
+                <ul className="type-body mt-9 space-y-6 text-white/65">
                   {column.links.map((link) => (
                     <li key={link}>
                       <a href="#" className="inline-flex items-center gap-2 hover:text-orange">
@@ -110,8 +110,8 @@ export function Footer() {
           </div>
 
           <div id="contact">
-            <h2 className="text-sm font-semibold text-orange">Get In Touch</h2>
-            <address className="mt-9 space-y-7 text-sm not-italic leading-6 text-white/65">
+            <h2 className="type-button text-orange">Get In Touch</h2>
+            <address className="type-body mt-9 space-y-7 not-italic text-white/65">
               <p className="flex gap-3">
                 <PinIcon className="mt-1 h-4 w-4 shrink-0 text-orange" />
                 Office - BLV - 6F - SF60959 A Building - Ajman Blvd, Ajman
@@ -132,9 +132,11 @@ export function Footer() {
           <FooterSocialLinks className="order-last flex lg:hidden" />
         </div>
 
-        <div className="relative mt-32 flex flex-col gap-8 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>©2025 All Rights Reserved by Virtuo Services F.Z.C</p>
-          <div className="flex flex-wrap gap-8">
+        <div className="relative mt-32 flex flex-col gap-8 border-t border-white/10 pt-8 text-center text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+          <p className="mx-auto sm:mx-0">
+            ©2025 All Rights Reserved by Virtuo Services F.Z.C
+          </p>
+          <div className="flex flex-wrap justify-center gap-8 sm:justify-start">
             {["Terms of Service", "Privacy Policy", "Cookie Policy"].map(
               (item) => (
                 <a key={item} href="#" className="flex items-center gap-2 hover:text-orange">

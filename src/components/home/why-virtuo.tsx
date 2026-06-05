@@ -6,10 +6,10 @@ export function WhyVirtuo() {
     <section className="py-20 sm:py-28 lg:py-36">
       <div className="container-page grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(360px,520px)] lg:gap-20 xl:grid-cols-[minmax(0,1fr)_minmax(480px,601px)]">
         <div>
-          <h2 className="heading-gradient font-display text-4xl font-medium tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
+          <h2 className="type-h2 heading-gradient">
             Why Do Businesses Choose Virtuo?
           </h2>
-          <div className="mt-9 max-w-[920px] space-y-7 text-sm leading-7 text-black/75 sm:text-base">
+          <div className="type-body mt-9 max-w-[920px] space-y-7 text-black/75">
             <p>
               Virtuo serves as your definitive liaison with the UAE&apos;s
               regulatory landscape, including DED/DET, MOHRE, and GDRFA. We

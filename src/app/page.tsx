@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { ScrollTopButton } from "@/components/scroll-top-button";
 import { CompanyIntro } from "@/components/home/company-intro";
 import { Faq } from "@/components/home/faq";
 import { GrowthCta } from "@/components/home/growth-cta";
@@ -25,6 +26,7 @@ export default function Home() {
         <Faq />
       </main>
       <Footer />
+      <ScrollTopButton />
     </>
   );
 }

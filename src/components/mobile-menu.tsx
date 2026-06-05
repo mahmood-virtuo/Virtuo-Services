@@ -32,7 +32,7 @@ export function MobileMenu() {
 
       {isOpen && (
         <div className="absolute inset-x-4 top-[154px] rounded-2xl bg-white p-6 text-ink shadow-[0_24px_60px_rgba(0,0,0,.18)] sm:top-[164px]">
-          <div className="flex flex-col gap-5 font-sans text-base font-medium leading-[25px]">
+          <div className="type-button flex flex-col gap-5">
             {links.map(([label, href]) => (
               <a
                 key={label}

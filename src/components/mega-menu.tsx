@@ -74,7 +74,7 @@ export function MegaMenu() {
               <a
                 key={section.title}
                 href="#services"
-                className={`font-display text-2xl font-semibold tracking-[-0.02em] transition-colors ${
+                className={`type-h3 transition-colors ${
                   activeIndex === index ? "text-orange" : "text-ink"
                 } hover:text-orange`}
                 data-mega-category={section.title}
@@ -86,7 +86,7 @@ export function MegaMenu() {
             ))}
           </div>
           <div className="bg-orange/70" />
-          <div className="grid content-center gap-x-20 gap-y-8 pl-20 text-base font-medium uppercase leading-none md:grid-cols-2">
+          <div className="type-h4 grid content-center gap-x-20 gap-y-8 pl-20 uppercase md:grid-cols-2">
             {active.links.map((link) => (
               <a
                 key={link}

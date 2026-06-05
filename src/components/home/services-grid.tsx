@@ -42,7 +42,7 @@ export function ServicesGrid() {
   return (
     <section id="services" className="pb-24 pt-12 sm:pb-36 sm:pt-20">
       <div className="container-page">
-        <h2 className="heading-gradient mx-auto max-w-3xl text-center font-display text-4xl font-medium leading-[1.05] tracking-[-0.03em] sm:text-5xl">
+        <h2 className="type-h2 heading-gradient mx-auto max-w-3xl text-center">
           Expert Solutions for
           <br />
           Accelerated Business Growth
@@ -70,11 +70,11 @@ export function ServicesGrid() {
                   isActive ? "brightness-0" : ""
                 }`}
               />
-              <h3 className="mt-9 font-sans text-[25px] font-semibold leading-[30px] tracking-[-0.02em]">
+              <h3 className="type-h3 mt-9">
                 {service.title}
               </h3>
               <p
-                className={`mt-4 text-base font-light leading-[25px] transition-colors duration-300 group-hover/card:text-ink group-focus/card:text-ink group-active/card:text-ink ${
+                className={`type-body mt-4 transition-colors duration-300 group-hover/card:text-ink group-focus/card:text-ink group-active/card:text-ink ${
                   isActive ? "text-ink" : "text-white/70"
                 }`}
               >

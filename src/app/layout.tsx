@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
-import { Alexandria, Anybody } from "next/font/google";
+import { Alexandria, Anybody, Inter } from "next/font/google";
 import "./globals.css";
 
 const alexandria = Alexandria({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-alexandria",
   display: "swap",
 });
 
 const anybody = Anybody({
   subsets: ["latin"],
+  weight: ["500"],
   variable: "--font-anybody",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["600"],
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -30,7 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${alexandria.variable} ${anybody.variable}`}>
+    <html
+      lang="en"
+      className={`${alexandria.variable} ${anybody.variable} ${inter.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

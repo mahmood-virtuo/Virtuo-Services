@@ -15,7 +15,7 @@ export function Header() {
   return (
     <header id="top" className="absolute inset-x-0 top-0 z-30 text-white">
       <div className="h-[58px] bg-orange text-ink">
-        <div className="container-page flex h-full items-center justify-between text-xs sm:text-sm">
+        <div className="type-button container-page flex h-full items-center justify-between">
           <div className="flex items-center gap-4 sm:gap-12">
             <a
               href="tel:+971500000000"
@@ -50,7 +50,7 @@ export function Header() {
         className="container-page flex h-[118px] items-center justify-between"
       >
         <Logo className="!h-[52px] !w-[138px] sm:!h-[61px] sm:!w-[162px]" />
-        <div className="hidden items-center gap-16 text-sm lg:flex">
+        <div className="type-button hidden items-center gap-16 lg:flex">
           <a href="#about" className="transition-colors hover:text-orange">
             About Us
           </a>

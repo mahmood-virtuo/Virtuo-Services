@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const items = [
   "PRO SERVICES",
   "BUSINESS SETUP",
@@ -12,10 +14,16 @@ function TickerGroup({ hidden = false }: { hidden?: boolean }) {
       {items.map((item) => (
         <div
           key={item}
-          className="flex items-center gap-8 font-sans text-[25px] font-normal leading-[30px] text-white"
+          className="type-h3 flex items-center gap-8 text-white"
         >
           {item}
-          <span className="h-5 w-5 rounded-bl-xl rounded-tr-xl bg-orange" />
+          <Image
+            src="/images/icons/strip-icon.svg"
+            alt=""
+            width={22}
+            height={22}
+            className="h-[22px] w-[22px] shrink-0"
+          />
         </div>
       ))}
     </div>
