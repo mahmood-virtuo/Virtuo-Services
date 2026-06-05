@@ -75,7 +75,7 @@ export function ServicesGrid() {
               </h3>
               <p
                 className={`type-body mt-4 transition-colors duration-300 group-hover/card:text-ink group-focus/card:text-ink group-active/card:text-ink ${
-                  isActive ? "text-ink" : "text-white/70"
+                  isActive ? "text-ink" : "text-white"
                 }`}
               >
                 {service.body}

@@ -7,13 +7,13 @@ export function CompanyIntro() {
       <div className="container-page grid items-center gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-24">
         <div className="order-2 flex w-full justify-center lg:order-1">
           <Image
-            src="/images/home/teams.png"
+            src="/images/home/leadership-team.jpg"
             alt="Virtuo Services leadership team"
-            width={578}
-            height={598}
+            width={760}
+            height={797}
             loading="eager"
-            sizes="(max-width: 1024px) min(100vw - 2rem, 578px), 40vw"
-            className="h-auto w-full max-w-[578px]"
+            sizes="(max-width: 1024px) min(100vw - 2rem, 620px), 40vw"
+            className="mx-auto h-auto w-[min(100%,620px)] rounded-bl-[48%] rounded-br-[48%]"
           />
         </div>
         <div className="order-1 lg:order-2">

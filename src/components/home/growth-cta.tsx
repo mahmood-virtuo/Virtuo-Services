@@ -9,7 +9,7 @@ export function GrowthCta() {
           <br />
           Virtuo&apos;s All-in-One Expert Services
         </h2>
-        <p className="type-body mx-auto mt-8 max-w-3xl text-white/70">
+        <p className="type-body mx-auto mt-8 max-w-3xl text-white">
           At Virtuo Services, we simplify the entire process with end-to-end
           business setup and PRO solutions, ensuring your journey in the UAE is
           smooth, compliant, and stress-free.

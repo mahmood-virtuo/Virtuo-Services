@@ -34,7 +34,7 @@ export function Faq() {
         <h2 className="type-h2 heading-gradient-light text-center">
           Frequently asked questions
         </h2>
-        <p className="type-body mx-auto mt-8 max-w-3xl text-center text-white/60">
+        <p className="type-body mx-auto mt-8 max-w-3xl text-center text-white">
           Discover how leading businesses optimize performance, automate
           workflows, and achieve transformative growth with Virtuo Services.
         </p>
@@ -61,7 +61,7 @@ export function Faq() {
                 <div
                   id={`faq-panel-${index}`}
                   hidden={!isOpen}
-                  className="type-body mt-4 max-w-5xl text-white/70"
+                  className="type-body mt-4 max-w-5xl text-white"
                 >
                   {faq.answer}
                 </div>
