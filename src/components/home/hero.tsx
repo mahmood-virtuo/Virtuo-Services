@@ -5,12 +5,12 @@ export function Hero() {
   return (
     <section className="relative min-h-[900px] overflow-hidden bg-slate-800 text-white">
       <Image
-        src="/images/home/hero-clean.jpg"
+        src="/images/home/hero-image.png"
         alt="Museum of the Future and Dubai skyline"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[56%_center] lg:object-center"
+        className="object-cover object-center"
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,16,24,.35),rgba(0,0,0,.48))]" />
       <div className="container-page relative flex min-h-[900px] items-center justify-center pb-8 pt-44">
@@ -21,7 +21,7 @@ export function Hero() {
             </span>
             Check out the new Resources
           </div>
-          <h1 className="font-display text-5xl font-medium leading-[1.05] tracking-[-0.03em] sm:text-7xl lg:text-[88px]">
+          <h1 className="font-display text-[2.35rem] font-medium leading-[1.04] tracking-[-0.03em] sm:text-7xl lg:text-[88px]">
             Start Your Business
             <br />
             in UAE with Ease

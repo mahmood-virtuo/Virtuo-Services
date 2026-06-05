@@ -1,13 +1,10 @@
 import {
   ArrowUpRightIcon,
-  FacebookIcon,
-  InstagramIcon,
-  LinkedInIcon,
   MailIcon,
   PhoneIcon,
   PinIcon,
-  XIcon,
 } from "./icons";
+import Image from "next/image";
 import { Logo } from "./logo";
 
 const columns = [
@@ -44,16 +41,18 @@ export function Footer() {
       id="footer"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#361000_0%,#070707_58%)] pb-8 pt-24 text-white sm:pt-32"
     >
-      <div
+      <Image
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-[-120px] text-center font-display text-[23vw] font-bold leading-none tracking-[-0.08em] text-white/[.04]"
-      >
-        virtuo
-      </div>
+        src="/images/footer-background-wordmark.png"
+        alt=""
+        width={1604}
+        height={424}
+        className="pointer-events-none absolute bottom-[-70px] left-1/2 max-w-[88vw] -translate-x-1/2 opacity-[.08]"
+      />
       <div className="container-page relative">
         <div className="grid gap-14 lg:grid-cols-[1.4fr_2.6fr_1.2fr]">
           <div>
-            <Logo light />
+            <Logo />
             <p className="mt-10 max-w-sm text-sm leading-7 text-white/65">
               Virtuo Services provides expert business setup and PRO solutions
               in the UAE. We offer premium, end-to-end support to ensure your
@@ -62,13 +61,21 @@ export function Footer() {
             </p>
             <div className="mt-9 flex items-center gap-5 text-sm text-white/70">
               <span>Follow Us :</span>
-              {[LinkedInIcon, InstagramIcon, FacebookIcon, XIcon].map(
-                (Icon, index) => (
-                  <a key={index} href="#" aria-label="Social media">
-                    <Icon className="h-4 w-4 text-orange" />
-                  </a>
-                ),
-              )}
+              {[
+                ["LinkedIn", "/images/linkedin.svg"],
+                ["Instagram", "/images/instagram.svg"],
+                ["Facebook", "/images/facebook.svg"],
+              ].map(([label, src]) => (
+                <a key={label} href="#" aria-label={label}>
+                  <Image
+                    src={src}
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="footer-social-icon"
+                  />
+                </a>
+              ))}
             </div>
           </div>
 

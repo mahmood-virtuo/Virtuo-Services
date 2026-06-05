@@ -16,7 +16,7 @@ export function CompanyIntro() {
           />
         </div>
         <div>
-          <h2 className="max-w-[800px] font-display text-4xl font-medium leading-[1.04] tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
+          <h2 className="max-w-[800px] font-display text-[2rem] font-medium leading-[1.04] tracking-[-0.03em] sm:text-5xl lg:text-[58px]">
             <span className="text-orange">Fast, transparent, UAE-aligned</span>{" "}
             corporate services.
           </h2>

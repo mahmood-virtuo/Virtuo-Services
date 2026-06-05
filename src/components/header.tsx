@@ -1,19 +1,17 @@
 import {
   ChevronDownIcon,
-  FacebookIcon,
-  InstagramIcon,
-  LinkedInIcon,
   MailIcon,
   MenuIcon,
   PhoneIcon,
 } from "./icons";
+import Image from "next/image";
 import { Logo } from "./logo";
 import { ButtonLink } from "./button-link";
 
 const socialLinks = [
-  { label: "LinkedIn", Icon: LinkedInIcon },
-  { label: "Instagram", Icon: InstagramIcon },
-  { label: "Facebook", Icon: FacebookIcon },
+  { label: "LinkedIn", src: "/images/linkedin.svg" },
+  { label: "Instagram", src: "/images/instagram.svg" },
+  { label: "Facebook", src: "/images/facebook.svg" },
 ];
 
 export function Header() {
@@ -40,9 +38,9 @@ export function Header() {
           <div className="hidden items-center gap-4 sm:flex">
             <span>Follow Us :</span>
             <div className="flex gap-4">
-              {socialLinks.map(({ label, Icon }) => (
+              {socialLinks.map(({ label, src }) => (
                 <a key={label} href="#" aria-label={label}>
-                  <Icon className="h-4 w-4" />
+                  <Image src={src} alt="" width={16} height={16} />
                 </a>
               ))}
             </div>
@@ -54,7 +52,7 @@ export function Header() {
         aria-label="Main navigation"
         className="container-page flex h-[118px] items-center justify-between"
       >
-        <Logo light />
+        <Logo />
         <div className="hidden items-center gap-16 text-sm lg:flex">
           <a href="#about" className="transition-colors hover:text-orange">
             About Us

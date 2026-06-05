@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const faqs = [
   {
     question: "How does Virtuo protect my data?",
@@ -22,6 +26,8 @@ const faqs = [
 ];
 
 export function Faq() {
+  const [openIndex, setOpenIndex] = useState(1);
+
   return (
     <section className="orange-grid px-4 py-24 text-white sm:py-32">
       <div className="mx-auto max-w-[1200px]">
@@ -33,20 +39,35 @@ export function Faq() {
           workflows, and achieve transformative growth with Virtuo Services.
         </p>
         <div className="mt-14 space-y-6">
-          {faqs.map((faq, index) => (
-            <details
-              key={faq.question}
-              open={index === 1}
-              className="group rounded-xl border border-orange bg-black/20 px-6 py-6 open:bg-orange/20 sm:px-8"
-            >
-              <summary className="cursor-pointer list-none font-display text-lg font-medium sm:text-xl">
-                {faq.question}
-              </summary>
-              <p className="mt-4 max-w-5xl text-sm leading-6 text-white/70">
-                {faq.answer}
-              </p>
-            </details>
-          ))}
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+
+            return (
+              <div
+                key={faq.question}
+                className={`rounded-xl border border-orange px-6 py-6 transition-colors sm:px-8 ${
+                  isOpen ? "bg-orange/20" : "bg-black/20"
+                }`}
+              >
+                <button
+                  type="button"
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${index}`}
+                  className="flex w-full cursor-pointer items-center justify-between text-left font-display text-lg font-medium sm:text-xl"
+                  onClick={() => setOpenIndex(index)}
+                >
+                  {faq.question}
+                </button>
+                <div
+                  id={`faq-panel-${index}`}
+                  hidden={!isOpen}
+                  className="mt-4 max-w-5xl text-sm leading-6 text-white/70"
+                >
+                  {faq.answer}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -19,8 +19,8 @@ export function Testimonials() {
               <div className="flex items-center gap-4">
                 <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full">
                   <Image
-                    src="/images/home/testimonial-avatar.jpg"
-                    alt=""
+                    src="/images/home/testimonial-avatar.png"
+                    alt="Alexanderia S"
                     fill
                     sizes="64px"
                     className="object-cover"

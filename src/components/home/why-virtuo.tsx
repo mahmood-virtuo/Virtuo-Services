@@ -31,11 +31,12 @@ export function WhyVirtuo() {
         </div>
         <div className="relative mx-auto aspect-square w-full max-w-[600px] overflow-hidden rounded-full">
           <Image
-            src="/images/home/handshake.jpg"
+            src="/images/home/handshake-image.png"
             alt="Business partners shaking hands"
             fill
+            loading="eager"
             sizes="(max-width: 1024px) 80vw, 34vw"
-            className="object-cover"
+            className="object-contain"
           />
         </div>
       </div>
