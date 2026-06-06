@@ -92,7 +92,7 @@ summary {
 .type-button {
   font-family: var(--font-alexandria), Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 400 !important;
   line-height: 25px;
 }
 

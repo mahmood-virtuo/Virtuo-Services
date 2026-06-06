@@ -24,7 +24,7 @@ export function ButtonLink({
   return (
     <a
       href={href}
-      className={`type-button inline-flex min-h-11 items-center justify-center gap-2 rounded-md border px-5 py-2.5 font-normal transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange ${styles[variant]}`}
+      className={`type-button inline-flex min-h-11 items-center justify-center gap-2 rounded-md border px-5 py-2.5 !font-normal transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange ${styles[variant]}`}
     >
       {children}
       {arrow && <ArrowUpRightIcon className="h-4 w-4" />}
