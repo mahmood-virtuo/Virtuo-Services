@@ -53,7 +53,7 @@ export function Faq() {
                   type="button"
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${index}`}
-                  className="type-h3 flex w-full cursor-pointer items-center justify-between text-left"
+                  className="type-h4 flex w-full cursor-pointer items-center justify-between text-left"
                   onClick={() => setOpenIndex(index)}
                 >
                   {faq.question}
