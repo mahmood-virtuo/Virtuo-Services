@@ -64,7 +64,7 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#361000_0%,#070707_58%)] pb-8 pt-24 text-white sm:pt-32"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#361000_0%,#070707_58%)] pb-8 pt-12 text-white lg:pt-32"
     >
       <Image
         aria-hidden="true"

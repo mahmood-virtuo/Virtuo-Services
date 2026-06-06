@@ -66,9 +66,9 @@ export function MegaMenu() {
 
       <div
         data-mega-menu-panel
-        className="pointer-events-none fixed left-1/2 top-[148px] z-50 w-[min(1590px,calc(100vw-2rem))] -translate-x-1/2 translate-y-3 opacity-0 transition duration-200 ease-out group-hover/menu:pointer-events-auto group-hover/menu:translate-y-0 group-hover/menu:opacity-100 group-focus-within/menu:pointer-events-auto group-focus-within/menu:translate-y-0 group-focus-within/menu:opacity-100"
+        className="pointer-events-none fixed inset-x-0 top-[148px] z-50 w-screen translate-y-3 opacity-0 transition duration-200 ease-out group-hover/menu:pointer-events-auto group-hover/menu:translate-y-0 group-hover/menu:opacity-100 group-focus-within/menu:pointer-events-auto group-focus-within/menu:translate-y-0 group-focus-within/menu:opacity-100"
       >
-        <div className="grid min-h-[386px] grid-cols-[.82fr_1px_1.18fr] bg-white px-8 py-16 text-ink shadow-[0_24px_60px_rgba(0,0,0,.14)] xl:px-16">
+        <div className="grid min-h-[480px] grid-cols-[.82fr_1px_1.18fr] bg-white px-10 py-16 text-ink shadow-[0_24px_60px_rgba(0,0,0,.14)] xl:px-20">
           <div className="flex flex-col justify-center gap-6 pr-10 xl:pr-16">
             {menuSections.map((section, index) => (
               <a

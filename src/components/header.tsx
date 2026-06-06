@@ -15,7 +15,7 @@ export function Header() {
   return (
     <header id="top" className="absolute inset-x-0 top-0 z-30 text-white">
       <div className="h-[58px] bg-orange text-ink">
-        <div className="type-button container-page flex h-full items-center justify-between">
+        <div className="type-body container-page flex h-full items-center justify-between">
           <div className="flex items-center gap-4 sm:gap-12">
             <a
               href="tel:+971500000000"

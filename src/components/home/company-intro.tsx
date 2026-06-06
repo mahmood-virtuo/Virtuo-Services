@@ -16,11 +16,11 @@ type CompanyIntroProps = {
 export function CompanyIntro({
   title = "Fast, transparent, UAE-aligned corporate services.",
   paragraphs = defaultParagraphs,
-  imageSrc = "/images/home/leadership-team.jpg",
+  imageSrc = "/images/home/teams-image.png",
   imageAlt = "Virtuo Services leadership team",
 }: CompanyIntroProps) {
   return (
-    <section id="about" className="py-20 sm:py-28 lg:py-36">
+    <section id="about" className="py-20 sm:pb-28 sm:pt-14 lg:py-36">
       <div className="container-page grid items-center gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-24">
         <div className="order-2 flex w-full justify-center lg:order-1">
           <Image
