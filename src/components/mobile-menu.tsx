@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { MenuIcon, XIcon } from "./icons";
 import { ButtonLink } from "./button-link";
 
 const links = [
-  ["About Us", "#about"],
+  ["About Us", "/about-us"],
   ["Services", "#services"],
   ["Blogs", "#testimonials"],
   ["Contact Us", "#contact"],
@@ -34,14 +35,25 @@ export function MobileMenu() {
         <div className="absolute inset-x-4 top-[154px] rounded-2xl bg-white p-6 text-ink shadow-[0_24px_60px_rgba(0,0,0,.18)] sm:top-[164px]">
           <div className="type-button flex flex-col gap-5">
             {links.map(([label, href]) => (
-              <a
-                key={label}
-                href={href}
-                className="transition-colors hover:text-orange active:text-orange"
-                onClick={() => setIsOpen(false)}
-              >
-                {label}
-              </a>
+              href.startsWith("/") ? (
+                <Link
+                  key={label}
+                  href={href}
+                  className="transition-colors hover:text-orange active:text-orange"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {label}
+                </Link>
+              ) : (
+                <a
+                  key={label}
+                  href={href}
+                  className="transition-colors hover:text-orange active:text-orange"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {label}
+                </a>
+              )
             ))}
           </div>
           <div className="mt-6">

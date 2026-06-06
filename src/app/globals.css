@@ -43,7 +43,7 @@ summary {
 }
 
 .container-page {
-  width: min(100% - 2rem, 1594px);
+  width: min(calc(100% - 2rem), 1594px);
   margin-inline: auto;
 }
 
@@ -217,7 +217,7 @@ summary {
 
 @media (max-width: 767px) {
   .container-page {
-    width: min(100% - 1.25rem, 1594px);
+    width: min(calc(100% - 1.25rem), 1594px);
   }
 
   .orange-grid {

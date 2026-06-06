@@ -1,5 +1,6 @@
 import { MailIcon, PhoneIcon } from "./icons";
 import Image from "next/image";
+import Link from "next/link";
 import { Logo } from "./logo";
 import { ButtonLink } from "./button-link";
 import { MegaMenu } from "./mega-menu";
@@ -51,9 +52,9 @@ export function Header() {
       >
         <Logo className="!h-[52px] !w-[138px] sm:!h-[61px] sm:!w-[162px]" />
         <div className="type-body hidden items-center gap-16 lg:flex">
-          <a href="#about" className="transition-colors hover:text-orange">
+          <Link href="/about-us" className="transition-colors hover:text-orange">
             About Us
-          </a>
+          </Link>
           <MegaMenu />
           <a href="#testimonials" className="transition-colors hover:text-orange">
             Blogs

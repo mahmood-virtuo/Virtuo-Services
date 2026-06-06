@@ -4,6 +4,7 @@ export { Hero } from "../home/hero";
 export { ServicesGrid } from "../home/services-grid";
 export { WhyVirtuo } from "../home/why-virtuo";
 export { Faq } from "./faq";
+export { PageHero } from "./page-hero";
 export { ServiceTicker } from "./service-ticker";
 export { Testimonials } from "./testimonials";
 export type { FaqItem } from "./faq";

@@ -46,7 +46,7 @@ export function Faq({
   const [openIndex, setOpenIndex] = useState(defaultOpenIndex);
 
   return (
-    <section className="orange-grid px-4 py-24 text-white sm:py-32">
+    <section id="faq" className="orange-grid px-4 py-24 text-white sm:py-32">
       <div className="mx-auto max-w-[1200px]">
         <h2 className="type-h2 heading-gradient-light text-center">
           {title}
@@ -69,7 +69,7 @@ export function Faq({
                   type="button"
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${index}`}
-                  className="type-h4 flex w-full cursor-pointer items-center justify-between text-left"
+                  className="type-h3 flex w-full cursor-pointer items-center justify-between text-left"
                   onClick={() => setOpenIndex(index)}
                 >
                   {faq.question}

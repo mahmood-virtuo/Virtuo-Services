@@ -5,32 +5,40 @@ import {
   PinIcon,
 } from "./icons";
 import Image from "next/image";
+import Link from "next/link";
 import { Logo } from "./logo";
 
 const columns = [
   {
     title: "Quick Links",
-    links: ["Home", "About Us", "Blogs", "F.A.Q's", "Contact Us", "Cost Calculator"],
+    links: [
+      { label: "Home", href: "/" },
+      { label: "About Us", href: "/about-us" },
+      { label: "Blogs", href: "/#testimonials" },
+      { label: "F.A.Q's", href: "/#faq" },
+      { label: "Contact Us", href: "#contact" },
+      { label: "Cost Calculator", href: "#" },
+    ],
   },
   {
     title: "PRO Services",
     links: [
-      "GDRFA",
-      "Virtual Office",
-      "Power Of Attorney",
-      "Legal Translation",
-      "MOHRE Services",
-      "Attestation Services",
+      { label: "GDRFA", href: "#" },
+      { label: "Virtual Office", href: "#" },
+      { label: "Power Of Attorney", href: "#" },
+      { label: "Legal Translation", href: "#" },
+      { label: "MOHRE Services", href: "#" },
+      { label: "Attestation Services", href: "#" },
     ],
   },
   {
     title: "Visa Services",
     links: [
-      "Residence Visa",
-      "Golden Visa",
-      "Investor Visa",
-      "Employment Visa",
-      "Dependent Visa",
+      { label: "Residence Visa", href: "#" },
+      { label: "Golden Visa", href: "#" },
+      { label: "Investor Visa", href: "#" },
+      { label: "Employment Visa", href: "#" },
+      { label: "Dependent Visa", href: "#" },
     ],
   },
 ];
@@ -95,13 +103,22 @@ export function Footer() {
                 </h2>
                 <ul className="type-body mt-9 space-y-6 text-white/65">
                   {column.links.map((link) => (
-                    <li key={link}>
-                      <a href="#" className="inline-flex items-center gap-2 hover:text-orange">
-                        {link}
-                        {column.title === "Quick Links" && (
-                          <ArrowUpRightIcon className="h-3 w-3" />
-                        )}
-                      </a>
+                    <li key={link.label}>
+                      {link.href.startsWith("/") ? (
+                        <Link href={link.href} className="inline-flex items-center gap-2 hover:text-orange">
+                          {link.label}
+                          {column.title === "Quick Links" && (
+                            <ArrowUpRightIcon className="h-3 w-3" />
+                          )}
+                        </Link>
+                      ) : (
+                        <a href={link.href} className="inline-flex items-center gap-2 hover:text-orange">
+                          {link.label}
+                          {column.title === "Quick Links" && (
+                            <ArrowUpRightIcon className="h-3 w-3" />
+                          )}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

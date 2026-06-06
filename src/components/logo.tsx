@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <a
-      href="#top"
+    <Link
+      href="/"
       aria-label="Virtuo Services home"
       className={`relative inline-block h-[61px] w-[162px] ${className}`}
     >
@@ -15,6 +16,6 @@ export function Logo({ className = "" }: { className?: string }) {
         sizes="162px"
         className="object-contain"
       />
-    </a>
+    </Link>
   );
 }
