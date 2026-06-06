@@ -1,3 +1,11 @@
+export { CompanyIntro } from "../home/company-intro";
+export { GrowthCta } from "../home/growth-cta";
+export { Hero } from "../home/hero";
+export { ServicesGrid } from "../home/services-grid";
+export { WhyVirtuo } from "../home/why-virtuo";
 export { Faq } from "./faq";
 export { ServiceTicker } from "./service-ticker";
 export { Testimonials } from "./testimonials";
+export type { FaqItem } from "./faq";
+export type { ServiceCardItem } from "../home/services-grid";
+export type { TestimonialItem } from "./testimonials";

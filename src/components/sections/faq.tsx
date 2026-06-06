@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 
-const faqs = [
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+const defaultFaqs: FaqItem[] = [
   {
     question: "How does Virtuo protect my data?",
     answer:
@@ -25,21 +30,32 @@ const faqs = [
   },
 ];
 
-export function Faq() {
-  const [openIndex, setOpenIndex] = useState(1);
+type FaqProps = {
+  title?: string;
+  description?: string;
+  items?: FaqItem[];
+  defaultOpenIndex?: number;
+};
+
+export function Faq({
+  title = "Frequently asked questions",
+  description = "Discover how leading businesses optimize performance, automate workflows, and achieve transformative growth with Virtuo Services.",
+  items = defaultFaqs,
+  defaultOpenIndex = 1,
+}: FaqProps) {
+  const [openIndex, setOpenIndex] = useState(defaultOpenIndex);
 
   return (
     <section className="orange-grid px-4 py-24 text-white sm:py-32">
       <div className="mx-auto max-w-[1200px]">
         <h2 className="type-h2 heading-gradient-light text-center">
-          Frequently asked questions
+          {title}
         </h2>
         <p className="type-body mx-auto mt-8 max-w-3xl text-center text-white">
-          Discover how leading businesses optimize performance, automate
-          workflows, and achieve transformative growth with Virtuo Services.
+          {description}
         </p>
         <div className="mt-14 space-y-6">
-          {faqs.map((faq, index) => {
+          {items.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (

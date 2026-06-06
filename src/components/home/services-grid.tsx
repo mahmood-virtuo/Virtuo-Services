@@ -3,7 +3,13 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const services = [
+export type ServiceCardItem = {
+  icon: string;
+  title: string;
+  body: string;
+};
+
+export const defaultServices: ServiceCardItem[] = [
   {
     icon: "/images/cards-icons/pro-services.svg",
     title: "PRO SERVICES",
@@ -36,19 +42,29 @@ const services = [
   },
 ];
 
-export function ServicesGrid() {
+type ServicesGridProps = {
+  eyebrow?: string;
+  title?: string;
+  items?: ServiceCardItem[];
+};
+
+export function ServicesGrid({
+  eyebrow = "Expert Solutions for",
+  title = "Accelerated Business Growth",
+  items = defaultServices,
+}: ServicesGridProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <section id="services" className="pb-24 pt-12 sm:pb-36 sm:pt-20">
       <div className="container-page">
         <h2 className="type-h2 heading-gradient mx-auto max-w-3xl text-center">
-          Expert Solutions for
+          {eyebrow}
           <br />
-          Accelerated Business Growth
+          {title}
         </h2>
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:mt-24 lg:grid-cols-3 lg:gap-12">
-          {services.map((service, index) => {
+          {items.map((service, index) => {
             const isActive = activeIndex === index;
 
             return (

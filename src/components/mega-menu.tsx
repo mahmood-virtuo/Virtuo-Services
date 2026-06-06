@@ -74,7 +74,7 @@ export function MegaMenu() {
               <a
                 key={section.title}
                 href="#services"
-                className={`font-sans text-[28px] font-medium leading-[34px] tracking-[-0.02em] transition-colors ${
+                className={`type-h3 transition-colors ${
                   activeIndex === index ? "text-orange" : "text-ink"
                 } hover:text-orange`}
                 data-mega-category={section.title}

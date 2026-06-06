@@ -3,14 +3,30 @@ import Image from "next/image";
 const testimonial =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
-const reviews = Array.from({ length: 10 }, (_, index) => ({
-  id: index + 1,
-  name: "Alexanderia S",
-  company: "Renewed Cellular Trading L.L.C",
-  body: testimonial,
-}));
+export type TestimonialItem = {
+  id: number;
+  name: string;
+  company: string;
+  body: string;
+};
 
-function ReviewCards({ hidden = false }: { hidden?: boolean }) {
+const defaultReviews: TestimonialItem[] = Array.from(
+  { length: 10 },
+  (_, index) => ({
+    id: index + 1,
+    name: "Alexanderia S",
+    company: "Renewed Cellular Trading L.L.C",
+    body: testimonial,
+  }),
+);
+
+function ReviewCards({
+  hidden = false,
+  reviews,
+}: {
+  hidden?: boolean;
+  reviews: TestimonialItem[];
+}) {
   return (
     <div aria-hidden={hidden} className="testimonial-group">
       {reviews.map((review) => (
@@ -44,16 +60,24 @@ function ReviewCards({ hidden = false }: { hidden?: boolean }) {
   );
 }
 
-export function Testimonials() {
+type TestimonialsProps = {
+  title?: string;
+  reviews?: TestimonialItem[];
+};
+
+export function Testimonials({
+  title = "What Our clients Say",
+  reviews = defaultReviews,
+}: TestimonialsProps) {
   return (
     <section id="testimonials" className="overflow-hidden py-24 sm:py-32">
       <h2 className="type-h2 heading-gradient px-4 text-center">
-        What Our clients Say
+        {title}
       </h2>
       <div className="fade-edges mt-16 overflow-hidden sm:mt-24">
         <div className="testimonial-track">
-          <ReviewCards />
-          <ReviewCards hidden />
+          <ReviewCards reviews={reviews} />
+          <ReviewCards hidden reviews={reviews} />
         </div>
       </div>
     </section>

@@ -46,10 +46,10 @@ export function ServiceTicker({ crossed = false }: { crossed?: boolean }) {
         aria-label="Featured services"
         className="relative h-[230px] overflow-hidden bg-white py-16 sm:h-[260px]"
       >
-        <div className="ticker-strip absolute inset-x-[-8%] top-[62px] overflow-hidden bg-black">
+        <div className="ticker-strip absolute inset-x-[-8%] top-1/2 overflow-hidden bg-black">
           <TickerTrack />
         </div>
-        <div className="ticker-strip-alt absolute inset-x-[-8%] top-[118px] overflow-hidden bg-black">
+        <div className="ticker-strip-alt absolute inset-x-[-8%] top-1/2 overflow-hidden bg-black">
           <TickerTrack className="ticker-track-slow" />
         </div>
       </section>
