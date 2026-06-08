@@ -48,7 +48,7 @@ export function Hero({
             {description}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <ButtonLink arrow>Get a Quote</ButtonLink>
+            <ButtonLink href="/get-a-quote" arrow>Get a Quote</ButtonLink>
             <ButtonLink variant="ghost-dark">Speak with an Expert</ButtonLink>
           </div>
         </div>

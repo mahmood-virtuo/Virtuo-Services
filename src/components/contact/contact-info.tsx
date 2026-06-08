@@ -21,8 +21,8 @@ const contactItems = [
 
 export function ContactInfo() {
   return (
-    <section className="bg-white px-4 py-20 text-ink sm:py-28">
-      <div className="mx-auto max-w-[1280px]">
+    <section className="bg-white px-4 py-[100px] text-ink">
+      <div className="container-page">
         <h2 className="type-h2 heading-gradient inline-block">
           Get in touch with us
         </h2>
@@ -58,7 +58,7 @@ export function ContactInfo() {
             src="/images/contact/map.png"
             alt="Office location map"
             fill
-            sizes="(min-width: 1280px) 1280px, 100vw"
+            sizes="(min-width: 1600px) 1600px, 100vw"
             className="object-cover"
           />
         </div>

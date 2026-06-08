@@ -36,7 +36,7 @@ const posts = [
 
 export function LatestBlogs() {
   return (
-    <section className="bg-white px-4 py-20 text-ink sm:py-28">
+    <section className="bg-white px-4 py-[100px] text-ink">
       <div className="mx-auto max-w-[1450px]">
         <h2 className="type-h2 heading-gradient inline-block">Latest Blogs</h2>
         <p className="type-body mt-3 max-w-[1120px] text-black/80">

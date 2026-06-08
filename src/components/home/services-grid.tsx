@@ -56,7 +56,7 @@ export function ServicesGrid({
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="services" className="pb-24 pt-12 sm:pb-36 sm:pt-20">
+    <section id="services" className="py-[100px]">
       <div className="container-page">
         <h2 className="type-h2 heading-gradient mx-auto max-w-3xl text-center">
           {eyebrow}

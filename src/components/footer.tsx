@@ -23,12 +23,11 @@ const columns = [
   {
     title: "PRO Services",
     links: [
+      { label: "Immigration Services", href: "/immigration-services" },
       { label: "GDRFA", href: "#" },
       { label: "Virtual Office", href: "#" },
       { label: "Power Of Attorney", href: "#" },
       { label: "Legal Translation", href: "#" },
-      { label: "MOHRE Services", href: "#" },
-      { label: "Attestation Services", href: "#" },
     ],
   },
   {

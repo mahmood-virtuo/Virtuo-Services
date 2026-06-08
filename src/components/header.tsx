@@ -64,7 +64,7 @@ export function Header() {
           </Link>
         </div>
         <div className="hidden lg:block">
-          <ButtonLink arrow>Get a Quote</ButtonLink>
+          <ButtonLink href="/get-a-quote" arrow>Get a Quote</ButtonLink>
         </div>
         <MobileMenu />
       </nav>

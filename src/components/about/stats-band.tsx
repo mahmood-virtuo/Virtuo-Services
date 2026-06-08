@@ -16,7 +16,7 @@ const stats = [
 
 export function StatsBand() {
   return (
-    <section className="px-4 py-12 sm:py-20">
+    <section className="px-4 py-[100px]">
       <div className="mx-auto grid max-w-[1594px] gap-8 rounded-[10px] bg-black p-8 text-white sm:p-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:p-14">
         <p className="type-body max-w-2xl text-white">
           <span className="block">Whether you&apos;re an entrepreneur, investor, or established</span>

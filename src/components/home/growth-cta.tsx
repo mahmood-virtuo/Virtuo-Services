@@ -12,7 +12,7 @@ export function GrowthCta({
   description = "At Virtuo Services, we simplify the entire process with end-to-end business setup and PRO solutions, ensuring your journey in the UAE is smooth, compliant, and stress-free.",
 }: GrowthCtaProps) {
   return (
-    <section className="orange-grid px-4 py-24 text-center text-white sm:py-32">
+    <section className="orange-grid px-4 py-[100px] text-center text-white">
       <div className="mx-auto max-w-4xl">
         <h2 className="type-h2 heading-gradient-light">
           {titleLineOne}
@@ -23,7 +23,7 @@ export function GrowthCta({
           {description}
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <ButtonLink arrow>Get a Quote</ButtonLink>
+          <ButtonLink href="/get-a-quote" arrow>Get a Quote</ButtonLink>
           <ButtonLink variant="ghost-dark">Discover more</ButtonLink>
         </div>
       </div>

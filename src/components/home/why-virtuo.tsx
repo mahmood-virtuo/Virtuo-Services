@@ -22,7 +22,7 @@ export function WhyVirtuo({
   showImage = true,
 }: WhyVirtuoProps) {
   return (
-    <section className="py-20 sm:py-28 lg:py-36">
+    <section className="py-[100px]">
       <div className="container-page grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(360px,520px)] lg:gap-20 xl:grid-cols-[minmax(0,1fr)_minmax(480px,601px)]">
         <div>
           <h2 className="type-h2 heading-gradient">

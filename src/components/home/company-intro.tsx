@@ -12,6 +12,7 @@ type CompanyIntroProps = {
   imageSrc?: string;
   imageAlt?: string;
   primaryLabel?: string;
+  primaryHref?: string;
   secondaryLabel?: string;
   secondaryVariant?: "outline" | "ghost-dark";
   className?: string;
@@ -23,12 +24,13 @@ export function CompanyIntro({
   imageSrc = "/images/home/teams-image.png",
   imageAlt = "Virtuo Services leadership team",
   primaryLabel = "Get a Quote",
+  primaryHref = "/get-a-quote",
   secondaryLabel = "Speak with an Expert",
   secondaryVariant = "outline",
   className = "",
 }: CompanyIntroProps) {
   return (
-    <section id="about" className={`py-20 sm:pb-28 sm:pt-14 lg:py-36 ${className}`}>
+    <section id="about" className={`py-[100px] ${className}`}>
       <div className="container-page grid min-w-0 items-center gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-24">
         <div className="order-2 flex min-w-0 w-full justify-center lg:order-1">
           <Image
@@ -51,7 +53,7 @@ export function CompanyIntro({
             ))}
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
-            <ButtonLink arrow>{primaryLabel}</ButtonLink>
+            <ButtonLink href={primaryHref} arrow>{primaryLabel}</ButtonLink>
             <ButtonLink variant={secondaryVariant}>{secondaryLabel}</ButtonLink>
           </div>
         </div>

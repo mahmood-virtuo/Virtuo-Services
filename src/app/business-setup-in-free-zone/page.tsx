@@ -66,6 +66,7 @@ export default function BusinessSetupInFreeZonePage() {
       <ContactFormSection
         formTitle="Speak to a Business Setup Expert"
         buttonLabel="Submit The Form"
+        sectionClassName="pt-[100px] sm:pt-[100px]"
       />
       <ServiceTicker crossed />
       <Testimonials />

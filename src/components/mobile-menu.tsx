@@ -57,7 +57,7 @@ export function MobileMenu() {
             ))}
           </div>
           <div className="mt-6">
-            <ButtonLink arrow>Get a Quote</ButtonLink>
+            <ButtonLink href="/get-a-quote" arrow>Get a Quote</ButtonLink>
           </div>
         </div>
       )}

@@ -46,7 +46,7 @@ export function Faq({
   const [openIndex, setOpenIndex] = useState(defaultOpenIndex);
 
   return (
-    <section id="faq" className="orange-grid px-4 py-24 text-white sm:py-32">
+    <section id="faq" className="orange-grid px-4 py-[100px] text-white">
       <div className="mx-auto max-w-[1200px]">
         <h2 className="type-h2 heading-gradient-light text-center">
           {title}

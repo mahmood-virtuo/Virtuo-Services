@@ -15,7 +15,7 @@ const menuSections = [
   {
     title: "PRO SERVICES",
     links: [
-      { label: "IMMIGRATION SERVICES", href: "#services" },
+      { label: "IMMIGRATION SERVICES", href: "/immigration-services" },
       { label: "TRADE LICENSE SERVICES", href: "#services" },
       { label: "NOTARY PUBLIC SERVICES", href: "#services" },
       { label: "CONSULATE SERVICES", href: "#services" },

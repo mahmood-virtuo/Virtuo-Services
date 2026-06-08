@@ -73,22 +73,22 @@ const whyBullets = [
 
 export function FreeZoneIntro() {
   return (
-    <section className="bg-white px-4 py-20 text-ink sm:py-28">
-      <div className="mx-auto grid max-w-[1280px] items-center gap-12 lg:grid-cols-[.82fr_1.18fr] lg:gap-20">
+    <section className="bg-white px-4 py-[100px] text-ink">
+      <div className="container-page grid items-center justify-center gap-10 lg:grid-cols-[auto_minmax(0,760px)] lg:gap-10">
         <div className="flex justify-center">
           <Image
             src="/images/free-zone/business-setup-dubai-free-zone.png"
             alt="Business setup consultation in Dubai free zone"
             width={622}
             height={558}
-            className="h-auto w-[min(100%,520px)]"
+            className="h-auto w-auto max-w-full"
           />
         </div>
         <div>
           <h2 className="type-h2 heading-gradient max-w-[760px]">
             Business Setup in Dubai Freezone
           </h2>
-          <div className="type-body mt-8 max-w-[850px] space-y-6 text-black/75">
+          <div className="type-body mt-8 max-w-[760px] space-y-6 text-justify text-black/75">
             {introParagraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -105,24 +105,24 @@ export function FreeZoneIntro() {
 
 export function FreeZoneIncludes() {
   return (
-    <section className="bg-white px-4 pb-24 text-ink sm:pb-32">
-      <div className="mx-auto max-w-[1250px]">
+    <section className="bg-white px-4 pb-[100px] text-ink">
+      <div className="container-page">
         <h2 className="type-h2 heading-gradient text-center">
           What Free Zone Business Setup Includes
         </h2>
 
-        <div className="mx-auto mt-14 grid max-w-[1250px] gap-x-6 gap-y-5 md:grid-cols-2 lg:grid-cols-6">
+        <div className="mx-auto mt-14 grid gap-x-6 gap-y-5 md:grid-cols-2 lg:grid-cols-6">
           {includedItems.map((item, index) => (
             <article
               key={item.title}
-              className={`grid min-h-[168px] grid-cols-[86px_1fr] items-center gap-5 rounded-[8px] bg-card px-8 py-7 text-white shadow-[0_7px_9px_rgba(0,0,0,.28)] md:grid-cols-[78px_1fr] ${includedCardPlacement[index]}`}
+              className={`grid min-h-[168px] grid-cols-[68px_1fr] items-center gap-5 rounded-[8px] bg-card px-8 py-7 text-white shadow-[0_7px_9px_rgba(0,0,0,.28)] md:grid-cols-[64px_1fr] ${includedCardPlacement[index]}`}
             >
               <Image
                 src={`/images/free-zone/icons/icon${index + 1}.svg`}
                 alt=""
                 width={95}
                 height={96}
-                className="h-auto w-[76px] justify-self-center"
+                className="h-auto w-[58px] justify-self-center md:w-[60px]"
               />
               <div>
                 <h3 className="text-[16px] font-semibold leading-[20px] text-orange">
@@ -142,13 +142,13 @@ export function FreeZoneIncludes() {
 
 export function FreeZoneWhyChoose() {
   return (
-    <section className="bg-white px-4 py-20 text-ink sm:py-28">
-      <div className="mx-auto grid max-w-[1280px] items-center gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
+    <section className="bg-white px-4 py-[100px] text-ink">
+      <div className="container-page grid items-center gap-10 lg:grid-cols-[760px_520px] lg:justify-center lg:gap-[72px]">
         <div>
           <h2 className="type-h2 heading-gradient max-w-[760px]">
             Why Do Businesses Choose Virtuo?
           </h2>
-          <div className="type-body mt-8 max-w-[800px] space-y-6 text-black/75">
+          <div className="type-body mt-8 max-w-[760px] space-y-6 text-justify text-black/75">
             <p>
               Virtuo Services F.Z.C has deep expertise in the company formation
               process and ongoing UAE business support. We simplify every step
@@ -172,18 +172,19 @@ export function FreeZoneWhyChoose() {
             </ul>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
-            <ButtonLink arrow>Get a Quote</ButtonLink>
+            <ButtonLink href="/get-a-quote" arrow>Get a Quote</ButtonLink>
             <ButtonLink variant="outline">Speak with an Expert</ButtonLink>
           </div>
         </div>
-        <div className="flex justify-center lg:justify-end">
-          <div className="relative aspect-square w-[min(100%,430px)] overflow-hidden rounded-full">
+        <div className="flex justify-center lg:justify-start">
+          <div className="w-[min(100%,520px)]">
             <Image
-              src="/images/contact/hero-image.png"
+              src="/images/home/handshake-image.png"
               alt="Business handshake"
-              fill
+              width={601}
+              height={601}
               sizes="(min-width: 1024px) 430px, 80vw"
-              className="object-cover"
+              className="h-auto w-full"
             />
           </div>
         </div>

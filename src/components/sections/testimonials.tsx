@@ -70,7 +70,7 @@ export function Testimonials({
   reviews = defaultReviews,
 }: TestimonialsProps) {
   return (
-    <section id="testimonials" className="overflow-hidden py-24 sm:py-32">
+    <section id="testimonials" className="overflow-hidden py-[100px]">
       <h2 className="type-h2 heading-gradient px-4 text-center">
         {title}
       </h2>

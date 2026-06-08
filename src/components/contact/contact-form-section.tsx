@@ -14,6 +14,7 @@ type ContactFormSectionProps = {
   formTitle?: string;
   formDescription?: string;
   buttonLabel?: string;
+  sectionClassName?: string;
 };
 
 export function ContactFormSection({
@@ -22,10 +23,11 @@ export function ContactFormSection({
   formTitle = "Let's connect constellations",
   formDescription = "Let's align our constellation! Reach out and let the magic of collaboration illuminate our skies.",
   buttonLabel = "Send it to the moon",
+  sectionClassName = "",
 }: ContactFormSectionProps) {
   return (
-    <section className="bg-white px-4 pb-24 pt-8 text-ink sm:pb-32">
-      <div className="mx-auto max-w-[1068px] text-center">
+    <section className={`bg-white px-4 py-[100px] text-ink ${sectionClassName}`}>
+      <div className="container-page text-center">
         <h2 className="type-h2 heading-gradient inline-block">
           {title}
         </h2>
@@ -33,9 +35,9 @@ export function ContactFormSection({
           {description}
         </p>
 
-        <div className="mt-12 rounded-[12px] border border-black/70 p-6 text-left sm:p-7 lg:grid lg:grid-cols-[1.45fr_.85fr] lg:items-center lg:gap-11">
+        <div className="mt-9 rounded-[12px] border border-black/70 p-6 text-left sm:mt-10 sm:p-7 lg:grid lg:grid-cols-[1fr_520px] lg:gap-[30px]">
           <form className="flex flex-col justify-center" action="#">
-            <h3 className="font-sans text-[32px] font-medium leading-[38px] text-ink">
+            <h3 className="type-h2 text-ink">
               {formTitle}
             </h3>
             <p className="mt-2 text-[13px] font-light leading-[18px] text-black/70">
@@ -78,12 +80,12 @@ export function ContactFormSection({
             </button>
           </form>
 
-          <div className="relative mt-8 aspect-[540/512] overflow-hidden rounded-[10px] lg:mt-0 lg:self-center">
+          <div className="relative mt-8 aspect-[540/512] overflow-hidden rounded-[10px] lg:mt-0 lg:h-full lg:min-h-0 lg:self-stretch">
             <Image
               src="/images/contact/form-image.png"
               alt="Business professionals in conversation"
               fill
-              sizes="(min-width: 1024px) 40vw, 100vw"
+              sizes="(min-width: 1600px) 520px, (min-width: 1024px) 32vw, 100vw"
               className="object-cover"
             />
           </div>
