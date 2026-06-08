@@ -7,44 +7,44 @@ const menuSections = [
   {
     title: "BUSINESS SETUP",
     links: [
-      "MAINLAND BUSINESS SETUP",
-      "FREE ZONE BUSINESS SETUP",
-      "OFFSHORE BUSINESS SETUP",
+      { label: "MAINLAND BUSINESS SETUP", href: "#services" },
+      { label: "FREE ZONE BUSINESS SETUP", href: "/business-setup-in-free-zone" },
+      { label: "OFFSHORE BUSINESS SETUP", href: "#services" },
     ],
   },
   {
     title: "PRO SERVICES",
     links: [
-      "IMMIGRATION SERVICES",
-      "TRADE LICENSE SERVICES",
-      "NOTARY PUBLIC SERVICES",
-      "CONSULATE SERVICES",
-      "ATTESTATION SERVICES",
-      "MOHRE SERVICES",
-      "LEGAL TRANSLATION SERVICES",
-      "DOCUMENT CLEARANCE SERVICES",
-      "POWER OF ATTORNEY",
-      "VIRTUAL OFFICE",
-      "GDRFA",
+      { label: "IMMIGRATION SERVICES", href: "#services" },
+      { label: "TRADE LICENSE SERVICES", href: "#services" },
+      { label: "NOTARY PUBLIC SERVICES", href: "#services" },
+      { label: "CONSULATE SERVICES", href: "#services" },
+      { label: "ATTESTATION SERVICES", href: "#services" },
+      { label: "MOHRE SERVICES", href: "#services" },
+      { label: "LEGAL TRANSLATION SERVICES", href: "#services" },
+      { label: "DOCUMENT CLEARANCE SERVICES", href: "#services" },
+      { label: "POWER OF ATTORNEY", href: "#services" },
+      { label: "VIRTUAL OFFICE", href: "#services" },
+      { label: "GDRFA", href: "#services" },
     ],
   },
   {
     title: "VISA SERVICES",
     links: [
-      "GOLDEN VISA",
-      "RESIDENCE VISA",
-      "DEPENDENT VISA",
-      "EMPLOYEMENT VISA",
-      "INVESTOR VISA",
+      { label: "GOLDEN VISA", href: "#services" },
+      { label: "RESIDENCE VISA", href: "#services" },
+      { label: "DEPENDENT VISA", href: "#services" },
+      { label: "EMPLOYEMENT VISA", href: "#services" },
+      { label: "INVESTOR VISA", href: "#services" },
     ],
   },
   {
     title: "BANK ACCOUNT OPENING",
     links: [
-      "BUSINESS BANK ACCOUNT OPENING",
-      "CORPORATE BANK OPENING",
-      "OFFSHORE BANK ACCOUNT",
-      "SME/STARTUP ACCOUNT",
+      { label: "BUSINESS BANK ACCOUNT OPENING", href: "#services" },
+      { label: "CORPORATE BANK OPENING", href: "#services" },
+      { label: "OFFSHORE BANK ACCOUNT", href: "#services" },
+      { label: "SME/STARTUP ACCOUNT", href: "#services" },
     ],
   },
 ];
@@ -89,11 +89,11 @@ export function MegaMenu() {
           <div className="type-body grid content-center gap-x-14 gap-y-8 pl-10 uppercase md:grid-cols-2 xl:gap-x-24 xl:pl-20">
             {active.links.map((link) => (
               <a
-                key={link}
-                href="#services"
+                key={link.label}
+                href={link.href}
                 className="transition-colors hover:text-orange"
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>

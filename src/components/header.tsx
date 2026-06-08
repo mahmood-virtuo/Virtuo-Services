@@ -56,12 +56,12 @@ export function Header() {
             About Us
           </Link>
           <MegaMenu />
-          <a href="#testimonials" className="transition-colors hover:text-orange">
+          <Link href="/blogs" className="transition-colors hover:text-orange">
             Blogs
-          </a>
-          <a href="#contact" className="transition-colors hover:text-orange">
+          </Link>
+          <Link href="/contact-us" className="transition-colors hover:text-orange">
             Contact Us
-          </a>
+          </Link>
         </div>
         <div className="hidden lg:block">
           <ButtonLink arrow>Get a Quote</ButtonLink>

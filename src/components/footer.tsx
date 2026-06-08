@@ -14,9 +14,9 @@ const columns = [
     links: [
       { label: "Home", href: "/" },
       { label: "About Us", href: "/about-us" },
-      { label: "Blogs", href: "/#testimonials" },
+      { label: "Blogs", href: "/blogs" },
       { label: "F.A.Q's", href: "/#faq" },
-      { label: "Contact Us", href: "#contact" },
+      { label: "Contact Us", href: "/contact-us" },
       { label: "Cost Calculator", href: "#" },
     ],
   },

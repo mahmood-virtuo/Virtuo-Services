@@ -7,9 +7,9 @@ import { ButtonLink } from "./button-link";
 
 const links = [
   ["About Us", "/about-us"],
-  ["Services", "#services"],
-  ["Blogs", "#testimonials"],
-  ["Contact Us", "#contact"],
+  ["Services", "/business-setup-in-free-zone"],
+  ["Blogs", "/blogs"],
+  ["Contact Us", "/contact-us"],
 ];
 
 export function MobileMenu() {

@@ -45,6 +45,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${alexandria.variable} ${anybody.variable} ${inter.variable}`}
+      data-scroll-behavior="smooth"
     >
       <body>
         <Header />
