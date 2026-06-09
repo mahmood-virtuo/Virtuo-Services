@@ -9,7 +9,7 @@ export function Logo({ className = "" }: { className?: string }) {
       className={`relative inline-block h-[61px] w-[162px] ${className}`}
     >
       <Image
-        src="/images/virtuo-logo-white.png"
+        src="/images/virtuo-logo-white.svg"
         alt="Virtuo Services"
         fill
         priority

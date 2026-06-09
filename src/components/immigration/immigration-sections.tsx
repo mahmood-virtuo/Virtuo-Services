@@ -28,8 +28,8 @@ const advantages = [
 export function ImmigrationOverview() {
   return (
     <section className="bg-white px-4 py-[100px] text-ink">
-      <div className="container-page grid items-center justify-center gap-10 xl:grid-cols-[622px_minmax(0,760px)] xl:gap-[70px]">
-        <div className="flex justify-center">
+      <div className="container-page grid w-full items-center justify-center gap-10 2xl:grid-cols-[622px_minmax(0,1fr)] 2xl:justify-start 2xl:gap-[90px]">
+        <div className="flex justify-center md:hidden 2xl:flex">
           <Image
             src="/images/immigration-services/image-1.png"
             alt="Visa consultation with immigration expert"
@@ -61,7 +61,7 @@ export function ImmigrationOverview() {
 export function ImmigrationTradeLicense() {
   return (
     <section className="bg-white px-4 pb-[100px] text-ink">
-      <div className="container-page grid items-center justify-center gap-10 xl:grid-cols-[760px_520px] xl:gap-[90px]">
+      <div className="container-page grid w-full items-center justify-center gap-10 2xl:grid-cols-[760px_520px] 2xl:justify-start 2xl:gap-[90px]">
         <div>
           <h2 className="type-h2 heading-gradient max-w-[760px]">
             Why a Trade License Is Essential in the UAE
@@ -87,7 +87,7 @@ export function ImmigrationTradeLicense() {
             focus on growing your business with confidence.
           </p>
         </div>
-        <div className="flex justify-center lg:justify-start">
+        <div className="flex justify-center md:hidden 2xl:flex 2xl:justify-start">
           <Image
             src="/images/immigration-services/image-2.png"
             alt="Residents and families walking in the UAE"

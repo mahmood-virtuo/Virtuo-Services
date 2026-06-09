@@ -68,8 +68,9 @@ export function MegaMenu() {
         data-mega-menu-panel
         className="pointer-events-none fixed inset-x-0 top-[148px] z-50 w-screen translate-y-3 opacity-0 transition duration-200 ease-out group-hover/menu:pointer-events-auto group-hover/menu:translate-y-0 group-hover/menu:opacity-100 group-focus-within/menu:pointer-events-auto group-focus-within/menu:translate-y-0 group-focus-within/menu:opacity-100"
       >
-        <div className="grid min-h-[480px] grid-cols-[.82fr_1px_1.18fr] bg-white px-10 py-16 text-ink shadow-[0_24px_60px_rgba(0,0,0,.14)] xl:px-20">
-          <div className="flex flex-col justify-center gap-6 pr-10 xl:pr-16">
+        <div className="grid min-h-[480px] justify-center bg-white px-10 py-16 text-ink shadow-[0_24px_60px_rgba(0,0,0,.14)]">
+          <div className="grid h-[345px] w-[min(1260px,calc(100vw-80px))] grid-cols-[minmax(0,420px)_1px_minmax(0,639px)] items-center gap-x-[100px]">
+          <div className="flex flex-col items-start justify-center gap-6">
             {menuSections.map((section, index) => (
               <a
                 key={section.title}
@@ -85,8 +86,8 @@ export function MegaMenu() {
               </a>
             ))}
           </div>
-          <div className="bg-orange/70" />
-          <div className="type-body grid content-center gap-x-14 gap-y-8 pl-10 uppercase md:grid-cols-2 xl:gap-x-24 xl:pl-20">
+          <div className="h-full bg-orange/70" />
+          <div className="type-body grid content-center gap-x-[100px] gap-y-8 text-left uppercase md:grid-cols-[minmax(0,270px)_minmax(0,270px)]">
             {active.links.map((link) => (
               <a
                 key={link.label}
@@ -96,6 +97,7 @@ export function MegaMenu() {
                 {link.label}
               </a>
             ))}
+          </div>
           </div>
         </div>
       </div>

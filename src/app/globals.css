@@ -195,6 +195,110 @@ summary {
     saturate(3572%) hue-rotate(1deg) brightness(103%) contrast(106%);
 }
 
+.virtuo-phone-input {
+  --iti-path-flags-1x: url("/images/intl-tel-input/flags.webp");
+  --iti-path-flags-2x: url("/images/intl-tel-input/flags@2x.webp");
+  --iti-border-color: rgba(255, 255, 255, 0.2);
+  --iti-dialcode-color: #ffffff;
+  --iti-dropdown-bg: #100604;
+  --iti-hover-color: rgba(238, 76, 1, 0.25);
+  --iti-icon-color: #ee4c01;
+  --iti-spacer-horizontal: 12px;
+  width: 100%;
+  color: #ffffff;
+}
+
+.virtuo-phone-input.iti {
+  width: 100%;
+}
+
+.virtuo-phone-input input.iti__tel-input {
+  height: 54px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  outline: none;
+  padding-left: 136px !important;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.virtuo-phone-input input.iti__tel-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.virtuo-phone-input input.iti__tel-input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 1px rgba(238, 76, 1, 0.25);
+}
+
+.virtuo-phone-input .iti__country-container {
+  color: #ffffff;
+  width: 120px;
+}
+
+.virtuo-phone-input .iti__selected-country {
+  width: 120px;
+  justify-content: center;
+  gap: 8px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.virtuo-phone-input .iti__selected-country-primary {
+  justify-content: center;
+  gap: 8px;
+  width: auto;
+  padding-inline: 0;
+}
+
+.virtuo-phone-input .iti__selected-country-primary:hover,
+.virtuo-phone-input .iti__selected-country:has(+ .iti__country-selector:hover) .iti__selected-country-primary {
+  background: rgba(238, 76, 1, 0.18);
+}
+
+.virtuo-phone-input .iti__selected-dial-code {
+  color: #ffffff;
+}
+
+.iti__country-selector {
+  z-index: 80;
+  border: 1px solid rgba(238, 76, 1, 0.45);
+  background: #100604;
+  color: #ffffff;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.45);
+}
+
+.iti__search-input {
+  background: #100604;
+  color: #ffffff;
+  outline: none;
+}
+
+.iti__search-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.iti__search-input-wrapper {
+  border-bottom-color: rgba(255, 255, 255, 0.16);
+}
+
+.iti__country {
+  color: #ffffff;
+}
+
+.iti__country.iti__highlight,
+.iti__country:hover {
+  background: rgba(238, 76, 1, 0.28);
+}
+
+.iti__dial-code {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .testimonial-track {
   display: flex;
   width: max-content;
