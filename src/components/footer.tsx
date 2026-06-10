@@ -84,7 +84,7 @@ function FooterLink({ href, children, arrow = false }: { href: string; children:
 
 function FooterContactForm() {
   const inputClass =
-    "h-[54px] w-full rounded-[5px] border border-white/25 bg-transparent px-5 text-[20px] font-light leading-[28px] text-white outline-none placeholder:text-white/45 transition-colors focus:border-orange focus:ring-0";
+    "font-display h-[54px] w-full rounded-[5px] border border-white/25 bg-transparent px-5 text-[15px] font-light leading-[22px] text-white outline-none placeholder:text-white/60 transition-colors focus:border-orange focus:ring-0";
 
   return (
     <form className="w-full" action="#">
@@ -97,12 +97,12 @@ function FooterContactForm() {
           aria-label="Message"
           placeholder="Message"
           rows={6}
-          className="min-h-[244px] w-full resize-none rounded-[5px] border border-white/25 bg-transparent px-5 py-4 text-[20px] font-light leading-[28px] text-white outline-none placeholder:text-white/45 transition-colors focus:border-orange focus:ring-0"
+          className="font-display min-h-[244px] w-full resize-none rounded-[5px] border border-white/25 bg-transparent px-5 py-4 text-[15px] font-light leading-[22px] text-white outline-none placeholder:text-white/60 transition-colors focus:border-orange focus:ring-0"
         />
       </div>
       <button
         type="submit"
-        className="mt-6 h-[54px] w-full rounded-[5px] bg-[linear-gradient(90deg,#ee4c01_0%,#000000_100%)] px-6 text-[20px] font-normal leading-[28px] text-white transition-opacity hover:opacity-90"
+        className="mt-6 h-[54px] w-full rounded-[5px] bg-[linear-gradient(90deg,#ee4c01_0%,#000000_100%)] px-6 font-[family-name:var(--font-inter)] text-[15px] font-normal leading-[22px] text-white transition-opacity hover:opacity-90"
       >
         Send it to the moon
       </button>
@@ -120,9 +120,9 @@ export function Footer() {
         aria-hidden="true"
         src="/images/footer-background-wordmark.png"
         alt=""
-        width={3207}
-        height={846}
-        className="pointer-events-none absolute bottom-[-18px] left-1/2 w-[980px] max-w-none -translate-x-1/2 opacity-[.8] sm:w-[1280px] lg:w-[1604px]"
+        width={1604}
+        height={424}
+        className="pointer-events-none absolute bottom-[30px] left-1/2 w-[980px] max-w-none -translate-x-1/2 opacity-[.8] sm:w-[1280px] lg:w-[1604px]"
       />
       <div className="container-page relative">
         <div className="grid gap-14 xl:grid-cols-[minmax(0,820px)_minmax(420px,650px)] xl:gap-[110px]">

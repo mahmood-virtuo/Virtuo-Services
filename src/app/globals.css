@@ -219,16 +219,17 @@ summary {
   border-radius: 5px;
   background: transparent;
   color: #ffffff;
-  font-size: 20px;
+  font-family: var(--font-anybody), Arial, sans-serif;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 28px;
+  line-height: 22px;
   outline: none;
   padding-left: 136px !important;
   transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .virtuo-phone-input input.iti__tel-input::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .virtuo-phone-input input.iti__tel-input:focus {
@@ -261,7 +262,16 @@ summary {
 }
 
 .virtuo-phone-input .iti__selected-dial-code {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-anybody), Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.virtuo-phone-input .iti__arrow {
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 
 .iti__country-selector {
@@ -296,7 +306,8 @@ summary {
 }
 
 .iti__dial-code {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
 }
 
 .testimonial-track {
