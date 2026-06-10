@@ -171,7 +171,7 @@ export function Footer() {
               <h2 className="text-[15px] font-semibold leading-[24px] text-orange">
                 Quick Links
               </h2>
-              <ul className="mt-7 grid gap-x-16 gap-y-6 text-[16px] font-light leading-[24px] sm:grid-cols-2">
+              <ul className="mt-7 grid gap-x-12 gap-y-6 text-[16px] font-light leading-[24px] sm:grid-cols-[max-content_max-content]">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
                     <FooterLink href={link.href} arrow>{link.label}</FooterLink>
