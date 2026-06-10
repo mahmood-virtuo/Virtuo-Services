@@ -87,12 +87,12 @@ export function MegaMenu() {
             ))}
           </div>
           <div className="h-full bg-orange/70" />
-          <div className="type-body grid content-center gap-x-[80px] gap-y-8 text-left uppercase md:grid-cols-[minmax(0,270px)_minmax(0,270px)]">
+          <div className="type-body grid content-center gap-x-[80px] gap-y-8 text-left uppercase md:grid-cols-[max-content_max-content]">
             {active.links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="transition-colors hover:text-orange"
+                className="whitespace-nowrap transition-colors hover:text-orange"
               >
                 {link.label}
               </a>
