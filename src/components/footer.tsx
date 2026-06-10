@@ -84,7 +84,7 @@ function FooterLink({ href, children, arrow = false }: { href: string; children:
 
 function FooterContactForm() {
   const inputClass =
-    "font-display h-[54px] w-full rounded-[5px] border border-white/25 bg-transparent px-5 text-[15px] font-light leading-[22px] text-white outline-none placeholder:text-white/60 transition-colors focus:border-orange focus:ring-0";
+    "font-display h-10 w-full rounded-[5px] border border-white/25 bg-transparent px-5 text-[15px] font-light leading-[22px] text-white outline-none placeholder:text-white/60 transition-colors focus:border-orange focus:ring-0";
 
   return (
     <form className="w-full" action="#">

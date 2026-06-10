@@ -213,7 +213,7 @@ summary {
 }
 
 .virtuo-phone-input input.iti__tel-input {
-  height: 54px;
+  height: 40px;
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 5px;
@@ -243,6 +243,7 @@ summary {
 }
 
 .virtuo-phone-input .iti__selected-country {
+  height: 40px;
   width: 120px;
   justify-content: center;
   gap: 8px;
